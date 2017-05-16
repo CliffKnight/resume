@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title>我的简历</title>
+    <!-- 载入所有的组件资源 -->
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/H5.css">
+    <link rel="stylesheet" type="text/css" href="css/H5ComponentBase.css">
+    <link rel="stylesheet" type="text/css" href="css/informations.css">
+    <link rel="stylesheet" type="text/css" href="css/showCode.css">
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <link rel="stylesheet" type="text/css" href="css/whyCoding.css">
+    <script type="text/javascript" src="js/H5.js"></script>
+    <script type="text/javascript" src="js/H5ComponentBase.js"></script>
+    <script type="text/javascript" src="js/informations.js"></script>
+    <script type="text/javascript" src="js/showCode.js"></script>
+    <script type="text/javascript" src="js/welcome.js"></script>
+    <script type="text/javascript" src="js/whyCoding.js"></script>
+
+    <body>
+    </body>
+    <script type="text/javascript">
+    $(function() {
+        var init = new H5();
+        init.addPage().addComponent('welcome', {
+            type: 'welcome',
+
+        }).addPage().addComponent('informations', {
+            type: 'informations',
+            animateIn: {
+                titleAnimateIn: {
+                    top: 20,
+                    opacity:1,
+                },
+                leftSideAnimateIn: {
+                    left: 200,
+                },
+                rightSideAnimateIn: {
+                    right: 50,
+                }
+            },
+            animateOut: {
+                titleAnimateOut: {
+                    top: -150,
+                    opacity:0,
+                },
+                leftSideAnimateOut: {
+                    left: -350,
+                },
+                rightSideAnimateOut: {
+                    right: -750,
+                }
+            },
+            animateTime: 400,
+        }).addPage().addComponent('showCode', {
+            type: 'showCode',
+            animateIn: {
+                titleAnimateIn: {
+                    top: 20,
+                    opacity:1,
+                },
+                leftSideAnimateIn: {
+                    left: 50,
+                },
+                rightSideAnimateIn: {
+                    right: 50,
+                }
+            },
+            animateOut: {
+                titleAnimateOut: {
+                    top: -150,
+                    opacity:0,
+                },
+                leftSideAnimateOut: {
+                    left: -750,
+                },
+                rightSideAnimateOut: {
+                    right: -750,
+                }
+            },
+            animateTime: 400,
+
+        }).addPage().addComponent('whyCoding', {
+            type: 'whyCoding',
+            animateIn: {
+                titleAnimateIn: {
+                    left: 20,
+                },
+                contentAnimateIn: {
+                    top: 150,
+                },
+            },
+            animateOut: {
+                titleAnimateOut: {
+                    left: -550,
+                },
+                contentAnimateOut: {
+                    top: 750,
+                },
+            },
+            animateTime: 400,
+        }).loader();;
+
+    });
+    </script>
+
+</html>
